@@ -66,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            convertView = mInflater.inflate(R.layout.scroll_line_item, parent, false);
-            CustomHorizontalScrollView hScrollView = (CustomHorizontalScrollView) convertView.findViewById(R.id.horizontalScrollView);
-            mHorizontalScrollView.AddOnScrollChangedListener(new OnScrollChangedListenerImpl(hScrollView));
+            if (null == convertView) {
+                convertView = mInflater.inflate(R.layout.scroll_line_item, parent, false);
+                CustomHorizontalScrollView hScrollView = (CustomHorizontalScrollView) convertView.findViewById(R.id.horizontalScrollView);
+                mHorizontalScrollView.AddOnScrollChangedListener(new OnScrollChangedListenerImpl(hScrollView));
+            }
             return convertView;
         }
     }

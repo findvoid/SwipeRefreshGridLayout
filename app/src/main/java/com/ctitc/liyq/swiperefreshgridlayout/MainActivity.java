@@ -67,9 +67,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             convertView = mInflater.inflate(R.layout.scroll_line_item, parent, false);
-            //列表水平滚动条
             CustomHorizontalScrollView hScrollView = (CustomHorizontalScrollView) convertView.findViewById(R.id.horizontalScrollView);
-            //列表表头滚动条
             mHorizontalScrollView.AddOnScrollChangedListener(new OnScrollChangedListenerImpl(hScrollView));
             return convertView;
         }

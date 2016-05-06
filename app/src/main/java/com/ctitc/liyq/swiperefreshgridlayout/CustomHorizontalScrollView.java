@@ -8,6 +8,7 @@ import android.widget.HorizontalScrollView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CustomHorizontalScrollView extends HorizontalScrollView {
 
     ScrollViewObserver mScrollViewObserver = new ScrollViewObserver();
